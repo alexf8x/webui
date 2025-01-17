@@ -6,22 +6,22 @@ deployment:
 #revisionHistoryLimit: 0
 
 image:
-  repository: alexf87/unicorn  # <--------------- NEW IMG HERE
-  pullPolicy: Always
+  repository: alpine/ollama
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.3"
-imagePullSecrets:
- - name: regcred
+#  tag: "1.3"
+#imagePullSecrets:
+# - name: regcred
 
 
 
 resources:
     limits:
-      cpu: "10m"
-      memory: "256Mi"
+      cpu: "50m"
+      memory: "512Mi"
     requests:
-      cpu: "10m"
-      memory: "256Mi"
+      cpu: "50m"
+      memory: "512Mi"
 
 
 
@@ -56,7 +56,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 8088
 
 ingress:
   enabled: true
@@ -64,14 +64,14 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod  # Change to your cluster issuer name
   hosts:
-    - host: s4.stratocloud.eu  # Change to your desired domain
+    - host: llm.stratocloud.eu  # Change to your desired domain
       paths:
         - path: /
           pathType: Prefix
   tls:
     - secretName: hello-kubernetes-tls  # Change to your desired secret name
       hosts:
-        - s4.stratocloud.eu  # Change to your desired domain
+        - llm.stratocloud.eu  # Change to your desired domain
 
 
 
@@ -82,13 +82,13 @@ livenessProbe:
 readinessProbe:
   httpGet:
     path: /
-    port: 80
+    port: 8088
 
 autoscaling:
   enabled: true
-  minReplicas: 2
+  minReplicas: 1
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 50
+  targetCPUUtilizationPercentage: 70
   targetMemoryUtilizationPercentage: 80
 
 # Additional volumes on the output Deployment definition.
