@@ -6,7 +6,7 @@ deployment:
 #revisionHistoryLimit: 0
 
 image:
-  repository: alpine/ollama:llama3.2
+  repository: alpine/ollama:latest
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
 #  tag: "1.3"
