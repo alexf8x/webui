@@ -83,10 +83,7 @@ ingress:
       paths:
         - path: /
           pathType: Prefix
-  tls:
-    - secretName: hello-kubernetes-tls  # Change to your desired secret name
-      hosts:
-        - llm.stratocloud.eu  # Change to your desired domain
+
 
 
 
