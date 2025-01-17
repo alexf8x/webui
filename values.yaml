@@ -56,7 +56,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 8088
+  port: 11434
 
 ingress:
   enabled: true
@@ -82,7 +82,7 @@ livenessProbe:
 readinessProbe:
   httpGet:
     path: /
-    port: 8088
+    port: 11434
 
 autoscaling:
   enabled: true
