@@ -79,14 +79,14 @@ ingress:
     kubernetes.io/ingress.class: nginx
     cert-manager.io/cluster-issuer: letsencrypt-prod  # Change to your cluster issuer name
   hosts:
-    - host: s4.stratocloud.eu  # Change to your desired domain
+    - host: llm.stratocloud.eu  # Change to your desired domain
       paths:
         - path: /
           pathType: Prefix
   tls:
     - secretName: hello-kubernetes-tls  # Change to your desired secret name
       hosts:
-        - s4.stratocloud.eu  # Change to your desired domain
+        - llm.stratocloud.eu  # Change to your desired domain
 
 
 
