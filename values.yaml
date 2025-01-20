@@ -56,8 +56,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  portapi: 11434
-  portweb: 80
+  port: 11434
+#  portweb: 80
 #ingress:
 #  enabled: true
 #  annotations:
@@ -78,7 +78,7 @@ ingress:
 
   annotations:
     kubernetes.io/ingress.class: nginx
-    kubernetes.io/service-upstream: lama3-lama-chart
+#    kubernetes.io/service-upstream: lama3-lama-chart
     
 #    cert-manager.io/cluster-issuer: letsencrypt-prod  # Change to your cluster issuer name
   hosts:
