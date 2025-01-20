@@ -8,11 +8,11 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port-web }}
-      name: http-port
+      name: httpport
       targetPort: http
       protocol: TCP
     - port: {{ .Values.service.port-api }}
-      name: api-port
+      name: apiport
       targetPort: 11434
       protocol: TCP
       
