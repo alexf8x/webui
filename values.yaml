@@ -56,8 +56,8 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 11434
-
+  port_api: 11434
+  port_web: 80
 #ingress:
 #  enabled: true
 #  annotations:
