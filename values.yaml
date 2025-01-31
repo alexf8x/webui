@@ -6,7 +6,7 @@ deployment:
 #revisionHistoryLimit: 0
 
 image:
-  repository: alexf87/ollamatiny
+  repository: alexf87/ollamatiny:1.1
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
 #  tag: "1.3"
