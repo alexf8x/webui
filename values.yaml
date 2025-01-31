@@ -56,7 +56,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 80
+  port: 11434
 #  portweb: 80
 #ingress:
 #  enabled: true
