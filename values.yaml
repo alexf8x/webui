@@ -99,13 +99,26 @@ ingress:
 
 
 livenessProbe:
+  initialDelaySeconds: 30
   httpGet:
     path: /
     port: http
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+    
 readinessProbe:
+  initialDelaySeconds: 20
   httpGet:
     path: /
     port: 11434
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+    
 
 autoscaling:
   enabled: true
