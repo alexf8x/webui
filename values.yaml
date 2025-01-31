@@ -130,7 +130,7 @@ autoscaling:
     scaleDown:
       stabilizationWindowSeconds: 300
     scaleUp:
-      stabilizationWindowSeconds: 300
+      stabilizationWindowSeconds: 30
 # Additional volumes on the output Deployment definition.
 volumes: []
 # - name: foo
