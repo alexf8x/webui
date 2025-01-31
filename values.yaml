@@ -15,13 +15,13 @@ image:
 
 
 
-resources:
-    limits:
-      cpu: "300m"
-      memory: "3G"
-    requests:
-      cpu: "300m"
-      memory: "3G"
+resources: ""
+#    limits:
+#      cpu: "300m"
+#      memory: "3G"
+#    requests:
+#      cpu: "300m"
+#      memory: "3G"
 
 
 
