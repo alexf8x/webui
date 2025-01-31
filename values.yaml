@@ -15,7 +15,7 @@ image:
 
 
 
-resources: ""
+resources: {}
 #    limits:
 #      cpu: "300m"
 #      memory: "3G"
