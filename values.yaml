@@ -56,7 +56,7 @@ securityContext: {}
 
 service:
   type: ClusterIP
-  port: 11434
+  port: 80
 #  portweb: 80
 #ingress:
 #  enabled: true
@@ -82,7 +82,7 @@ ingress:
     
 #    cert-manager.io/cluster-issuer: letsencrypt-prod  # Change to your cluster issuer name
   hosts:
-    - host: llm.stratocloud.eu  # Change to your desired domain
+    - host: llm2.stratocloud.eu  # Change to your desired domain
       paths:
         - path: /
           pathType: Prefix
