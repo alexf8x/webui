@@ -17,11 +17,11 @@ image:
 
 resources:
     limits:
-      cpu: "90m"
-      memory: "1024Mi"
+      cpu: "300m"
+      memory: "3G"
     requests:
-      cpu: "90m"
-      memory: "1024Mi"
+      cpu: "300m"
+      memory: "3G"
 
 
 
