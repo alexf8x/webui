@@ -76,12 +76,12 @@ service:
 ingress:
   enabled: true
 
-  annotations: {
+  annotations: 
     kubernetes.io/ingress.class: nginx
     nginx.ingress.kubernetes.io/proxy-read-timeout: '300',
     nginx.ingress.kubernetes.io/proxy-send-timeout: '300'
 #    kubernetes.io/service-upstream: lama3-lama-chart
-    }
+    
 #    cert-manager.io/cluster-issuer: letsencrypt-prod  # Change to your cluster issuer name
   hosts:
     - host: llm2.stratocloud.eu  # Change to your desired domain
