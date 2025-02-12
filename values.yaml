@@ -17,10 +17,10 @@ image:
 
 resources: 
     limits:
-      cpu: "2000m"
+      cpu: "3000m"
       memory: "4G"
     requests:
-      cpu: "500m"
+      cpu: "2000m"
       memory: "2G"
 
 
