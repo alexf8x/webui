@@ -145,7 +145,7 @@ volumeMounts: []
 #   readOnly: true
 
 nodeSelector:
-  nvidia.com/gpu.count: 1
+  nvidia.com/gpu.count: '1'
 
 tolerations: []
 
