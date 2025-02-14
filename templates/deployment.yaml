@@ -9,7 +9,7 @@ spec:
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   
-  revisionHistoryLimit: {{ .Values.revisionHistoryLimit }}
+  revisionHistoryLimit: {{ .Values.deployment.revisionHistoryLimit }}
 
   selector:
     matchLabels:
