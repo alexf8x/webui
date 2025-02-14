@@ -144,7 +144,8 @@ volumeMounts: []
 #   mountPath: "/etc/foo"
 #   readOnly: true
 
-nodeSelector: {}
+nodeSelector:
+  nvidia.com/gpu.count: 1
 
 tolerations: []
 
