@@ -152,4 +152,4 @@ tolerations: []
 
 affinity: {}
 
-args: '--gpus=all'
+args: "--gpus=all"
