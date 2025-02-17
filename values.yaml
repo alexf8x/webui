@@ -23,7 +23,7 @@ resources:
     requests:
       cpu: "1000m"
       memory: "3G"
-
+      nvidia.com/gpu: 1
 
 
 nameOverride: ""
