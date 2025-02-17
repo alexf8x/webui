@@ -44,9 +44,7 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
 
-          args:
-            - "gpus=all"
-            
+           
 
               
           livenessProbe:
