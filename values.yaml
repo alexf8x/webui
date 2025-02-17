@@ -28,7 +28,7 @@ resources:
 
 nameOverride: ""
 fullnameOverride: ""
-runtimeClassName: nvidia
+runtimeClassName: nvidia # MUST HAVE !!! Else gpu in pod is present, but not usable !!
 
 serviceAccount:
   # Specifies whether a service account should be created
