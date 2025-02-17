@@ -45,7 +45,7 @@ spec:
               protocol: TCP
 
           args:
-            {{ .Values.args }}
+            {{- toYaml .Values.args | nindent 12 }}
 
               
           livenessProbe:
