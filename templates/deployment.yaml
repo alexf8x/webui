@@ -45,7 +45,7 @@ spec:
               protocol: TCP
 
           args:
-            - "--gpus=all"
+            - "gpus=all"
             
 
               
