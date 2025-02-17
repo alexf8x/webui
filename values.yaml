@@ -28,7 +28,7 @@ resources:
 
 nameOverride: ""
 fullnameOverride: ""
-
+runtimeClassName: nvidia
 
 serviceAccount:
   # Specifies whether a service account should be created
