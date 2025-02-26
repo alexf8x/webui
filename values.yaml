@@ -1,6 +1,6 @@
 #replicaCount: 5
 deployment:
-  replicas: 1
+  replicas: 3
   revisionHistoryLimit: 0 #set to 0 not to have dangling replica sets after pod terminations
 
 #revisionHistoryLimit: 0
