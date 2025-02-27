@@ -122,6 +122,36 @@ readinessProbe:
   timeoutSeconds: 5
   failureThreshold: 6
   successThreshold: 1
+
+
+livenessProbe2:
+  initialDelaySeconds: 30
+  httpGet:
+    path: /
+    port: 8080
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+    
+readinessProbe2:
+  initialDelaySeconds: 20
+  httpGet:
+    path: /
+    port: 8080
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
+
+
+
+
+
+
+
+  
     
 
 autoscaling:
