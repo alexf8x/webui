@@ -9,7 +9,7 @@ spec:
   ports:
     - port: {{ .Values.service.port }}
       name: httpport
-      targetPort: 11434
+      targetPort: 8080
       protocol: TCP
       
   selector:
