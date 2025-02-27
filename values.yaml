@@ -12,7 +12,13 @@ image:
   tag: "1.0"
 #imagePullSecrets:
 # - name: regcred
-
+image2:
+  repository: nickwharton/openwebui
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  #tag: "1.0"
+#imagePullSecrets:
+# - name: regcred
 
 
 resources: 
@@ -58,6 +64,10 @@ securityContext: {}
 service:
   type: ClusterIP
   port: 11434
+
+service2:
+  type: ClusterIP
+  port: 8080
 #  portweb: 80
 #ingress:
 #  enabled: true
