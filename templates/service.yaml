@@ -14,3 +14,23 @@ spec:
       
   selector:
     {{- include "uni_chart.selectorLabels" . | nindent 4 }}
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "uni_chart.fullname" . }}
+  labels:
+    {{- include "uni_chart.labels" . | nindent 4 }}
+spec:
+  type: {{ .Values.service2.type }}
+  ports:
+    - port: {{ .Values.service2.port }}
+      name: webuiport
+      targetPort: 8080
+      protocol: TCP
+      
+  selector:
+    {{- include "uni_chart.selectorLabels" . | nindent 4 }}
+
