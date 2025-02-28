@@ -70,7 +70,7 @@ spec:
               protocol: TCP
           env:
             - name: WEBUI_AUTH
-              value: {{ .Values.env.WEBUI_AUTH }}
+              value: "{{ .Values.env.WEBUI_AUTH }}"
 
            
 
