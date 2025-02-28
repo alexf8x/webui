@@ -20,6 +20,10 @@ image2:
 #imagePullSecrets:
 # - name: regcred
 
+env:
+  WEBUI_AUTH: false
+
+
 
 resources: 
     limits:
