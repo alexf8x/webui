@@ -52,28 +52,7 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
 
-        - name: {{ .Values.image2.repository }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image2.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image2.pullPolicy }}
-          ports:
-            - name: http
-              containerPort: {{ .Values.service2.port }}
-              protocol: TCP
 
-
-              
-          livenessProbe:
-            {{- toYaml .Values.livenessProbe2 | nindent 12 }}
-          readinessProbe:
-            {{- toYaml .Values.readinessProbe2 | nindent 12 }}
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-          {{- with .Values.volumeMounts }}   
-          volumeMounts:
-            {{- toYaml . | nindent 12 }}
-          {{- end }}
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
