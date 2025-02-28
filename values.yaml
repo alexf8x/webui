@@ -107,7 +107,7 @@ livenessProbe:
   initialDelaySeconds: 30
   httpGet:
     path: /
-    port: http
+    port: 11434
   periodSeconds: 10
   timeoutSeconds: 5
   failureThreshold: 6
