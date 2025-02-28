@@ -62,7 +62,7 @@ spec:
         - name: webui
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image2.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.image2.repository }}:{{ .Values.image2.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image2.pullPolicy }}
           ports:
             - name: http
