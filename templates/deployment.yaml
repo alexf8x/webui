@@ -45,6 +45,17 @@ spec:
               containerPort: {{ .Values.service.port }}
               protocol: TCP
 
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image2.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service2.port }}
+              protocol: TCP
+
+
            
 
               
