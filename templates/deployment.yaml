@@ -68,7 +68,9 @@ spec:
             - name: http
               containerPort: {{ .Values.service2.port }}
               protocol: TCP
-
+          env:
+            - name: WEBUI_AUTH
+              value: {{ .Values.env.WEBUI_AUTH }}
 
            
 
