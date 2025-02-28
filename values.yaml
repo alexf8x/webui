@@ -146,7 +146,8 @@ readinessProbe2:
   failureThreshold: 6
   successThreshold: 1
 
-
+env:
+  WEBUI_AUTH: false
 
 
 
