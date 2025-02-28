@@ -35,7 +35,7 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
-        - name: {{ .Values.image.repository }}
+        - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
@@ -43,7 +43,11 @@ spec:
           ports:
             - name: http
               containerPort: {{ .Values.service.port }}
-              protocol: TCP 
+              protocol: TCP
+
+           
+
+              
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
@@ -51,8 +55,9 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
-
-
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
       {{- with .Values.volumes }}
       volumes:
         {{- toYaml . | nindent 8 }}
