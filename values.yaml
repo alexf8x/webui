@@ -22,7 +22,7 @@ image2:
 
 env:
   WEBUI_AUTH: false
-
+  OLLAMA_TIMEOUT: 60
 
 
 resources: 
