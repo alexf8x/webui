@@ -188,3 +188,11 @@ tolerations: []
 affinity: {}
 
 #args: "--gpus=all"
+pvc:
+  enabled: true # enable or disable PVC creation
+  name: my-pvc # default PVC name
+  storageClassName: "longhorn" # empty string means use default storage class
+  accessModes: ReadWriteOnce # other options are ReadOnlyMany, ReadWriteMany
+  resources:
+    requests:
+      storage: "10Gi" # default storage size
