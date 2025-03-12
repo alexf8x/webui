@@ -44,6 +44,13 @@ spec:
             - name: llamaport 
               containerPort: {{ .Values.service.port }}
               protocol: TCP
+
+
+          env:
+            - name: OLLAMA_TIMEOUT
+              value: "{{ .Values.env.OLLAMA_TIMEOUT }}"
+
+              
           livenessProbe:
             {{- toYaml .Values.livenessProbe | nindent 12 }}
           readinessProbe:
