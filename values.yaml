@@ -6,10 +6,10 @@ deployment:
 #revisionHistoryLimit: 0
 
 image:
-  repository: alexf87/ollama31
+  repository: alexf87/githubaction
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "1.0"
+  tag: latest
 #imagePullSecrets:
 # - name: regcred
 image2:
