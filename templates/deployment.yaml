@@ -25,6 +25,14 @@ spec:
         {{- with .Values.podLabels }}
         {{- toYaml . | nindent 8 }}
         {{- end }}
+      namespace:
+        metadata:
+          name: {{ .Values.namespace.name }}
+          labels:
+            environment: {{ .Values.namespace.environment }}
+            app: {{ .Values.namespace.app }}
+
+        
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
