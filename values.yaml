@@ -180,6 +180,14 @@ volumeMounts: []
 #   mountPath: "/etc/foo"
 #   readOnly: true
 
+namespace:
+  enabled: true
+  name: 'webui'
+  app: 'webui'
+  environment: 'prod'
+
+
+
 nodeSelector:
   nvidia.com/gpu.count: '1'
 
