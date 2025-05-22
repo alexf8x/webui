@@ -24,7 +24,7 @@ env:
   WEBUI_AUTH: false
   OLLAMA_TIMEOUT: 60
   OLLAMA_KEEP_ALIVE: -1
-  DEFAULT_MODELS: llama3.1:8b
+  DEFAULT_MODELS: "llama3.1:8b"
 
 resources: 
     limits:
