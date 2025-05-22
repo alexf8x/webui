@@ -4,8 +4,9 @@ metadata:
   name: {{ include "uni_chart.fullname" . }}
   labels:
     {{- include "uni_chart.labels" . | nindent 4 }}
+  {{- if .Values.namespace.enabled }}
   namespace: {{ .Values.namespace.name }}
-         
+  {{- end }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.deployment.replicas }}
