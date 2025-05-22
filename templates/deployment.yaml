@@ -51,6 +51,10 @@ spec:
           env:
             - name: OLLAMA_TIMEOUT
               value: "{{ .Values.env.OLLAMA_TIMEOUT }}"
+            - name: DEFAULT_MODELS
+              value: "{{ .Values.env.DEFAULT_MODELS }}"
+            - name: OLLAMA_KEEP_ALIVE
+              value: "{{ .Values.env.OLLAMA_KEEP_ALIVE }}"
 
               
           livenessProbe:
