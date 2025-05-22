@@ -28,12 +28,12 @@ env:
 
 resources: 
     limits:
-      cpu: "5000m"
-      memory: "6G"
+      cpu: 5000m
+      memory: 6G
       nvidia.com/gpu: 1
     requests:
-      cpu: "2000m"
-      memory: "4G"
+      cpu: 2000m
+      memory: 4G
       nvidia.com/gpu: 1
 
 
