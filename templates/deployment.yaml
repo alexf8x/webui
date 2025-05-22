@@ -55,6 +55,8 @@ spec:
               value: "{{ .Values.env.DEFAULT_MODELS }}"
             - name: OLLAMA_KEEP_ALIVE
               value: "{{ .Values.env.OLLAMA_KEEP_ALIVE }}"
+            - name: WEBUI_AUTH
+              value: "{{ .Values.env.WEBUI_AUTH }}"
 
               
           livenessProbe:
