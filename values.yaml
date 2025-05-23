@@ -19,13 +19,15 @@ image2:
   tag: "1.1"
 #imagePullSecrets:
 # - name: regcred
-image3:
-  repository: searxng/searxng
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
-#imagePullSecrets:
-# - name: regcred
+
+
+#image3:
+#  repository: searxng/searxng
+#  pullPolicy: IfNotPresent
+#  # Overrides the image tag whose default is the chart appVersion.
+#  tag: latest
+##imagePullSecrets:
+## - name: regcred
 
 
 env:
