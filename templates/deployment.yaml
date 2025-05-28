@@ -71,6 +71,40 @@ spec:
 
 
 
+        - name: searxng
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image3.repository }}:{{ .Values.image3.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image3.pullPolicy }}
+          ports:
+            - name: searxngport 
+              containerPort: {{ .Values.service3.port }}
+              protocol: TCP
+
+
+          env:
+            - name: OLLAMA_TIMEOUT
+              value: "{{ .Values.env.OLLAMA_TIMEOUT }}"
+            - name: OLLAMA_KEEP_ALIVE
+              value: "{{ .Values.env.OLLAMA_KEEP_ALIVE }}"
+            - name: WEBUI_AUTH
+              value: "{{ .Values.env.WEBUI_AUTH }}"
+            - name: BIND_ADDRESS
+              value: "{{ .Values.env.BIND_ADDRESS }}"
+              
+          livenessProbe:
+            {{- toYaml .Values.livenessProbe3 | nindent 12 }}
+          readinessProbe:
+            {{- toYaml .Values.readinessProbe3 | nindent 12 }}
+          resources:
+            {{- toYaml .Values.resources3 | nindent 12 }}
+          {{- with .Values.volumeMounts }}
+          volumeMounts:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+
+
+
 
 
         - name: webui
@@ -95,7 +129,7 @@ spec:
           readinessProbe:
             {{- toYaml .Values.readinessProbe2 | nindent 12 }}
           resources:
-            {{- toYaml .Values.resources | nindent 12 }}
+            {{- toYaml .Values.resources2 | nindent 12 }}
           {{- with .Values.volumeMounts }}
           volumeMounts:
             {{- toYaml . | nindent 12 }}
