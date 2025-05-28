@@ -21,11 +21,11 @@ image2:
 # - name: regcred
 
 
-#image3:
-#  repository: searxng/searxng
-#  pullPolicy: IfNotPresent
-#  # Overrides the image tag whose default is the chart appVersion.
-#  tag: latest
+image3:
+  repository: searxng/searxng
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: latest
 ##imagePullSecrets:
 ## - name: regcred
 
@@ -35,6 +35,7 @@ env:
   OLLAMA_TIMEOUT: 60
   OLLAMA_KEEP_ALIVE: -1
   DEFAULT_MODELS: "llama3.1:8b"
+  BIND_ADDRESS: "0.0.0.0:7777"
 
 resources: 
     limits:
@@ -45,6 +46,26 @@ resources:
       cpu: 2000m
       memory: 4Gi
       nvidia.com/gpu: 1
+
+resources2: 
+    limits:
+      cpu: 5000m
+      memory: 6Gi
+#      nvidia.com/gpu: 1
+    requests:
+      cpu: 2000m
+      memory: 4Gi
+#      nvidia.com/gpu: 1
+
+resources3: 
+    limits:
+      cpu: 5000m
+      memory: 6Gi
+#      nvidia.com/gpu: 1
+    requests:
+      cpu: 2000m
+      memory: 4Gi
+#      nvidia.com/gpu: 1
 
 
 nameOverride: ""
@@ -84,6 +105,11 @@ service2:
   type: ClusterIP
   port: 8080
   name: webui
+
+service3:
+  type: ClusterIP
+  port: 7777
+  name: webui 
 #  portweb: 80
 #ingress:
 #  enabled: true
@@ -162,7 +188,26 @@ readinessProbe2:
   successThreshold: 1
 
 
+livenessProbe3:
+  initialDelaySeconds: 30
+  httpGet:
+    path: /
+    port: 7777
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
 
+    
+readinessProbe3:
+  initialDelaySeconds: 20
+  httpGet:
+    path: /
+    port: 7777
+  periodSeconds: 10
+  timeoutSeconds: 5
+  failureThreshold: 6
+  successThreshold: 1
 
   
     
