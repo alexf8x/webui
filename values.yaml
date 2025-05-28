@@ -22,10 +22,10 @@ image2:
 
 
 image3:
-  repository: searxng/searxng
+  repository: alexf87/searxng-json
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: latest
+  tag: 1.0
 ##imagePullSecrets:
 ## - name: regcred
 
