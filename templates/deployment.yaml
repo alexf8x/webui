@@ -91,6 +91,8 @@ spec:
               value: "{{ .Values.env.WEBUI_AUTH }}"
             - name: BIND_ADDRESS
               value: "{{ .Values.env.BIND_ADDRESS }}"
+            - name: SECRET
+              value: "{{ .Values.env.SECRET }}"
               
           livenessProbe:
             {{- toYaml .Values.livenessProbe3 | nindent 12 }}
