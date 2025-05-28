@@ -39,7 +39,7 @@ env:
 
 resources: 
     limits:
-      cpu: 5000m
+      cpu: 2500m
       memory: 6Gi
       nvidia.com/gpu: 1
     requests:
@@ -49,22 +49,22 @@ resources:
 
 resources2: 
     limits:
-      cpu: 5000m
-      memory: 6Gi
+      cpu: 2000m
+      memory: 3Gi
 #      nvidia.com/gpu: 1
     requests:
-      cpu: 2000m
-      memory: 4Gi
+      cpu: 1500m
+      memory: 2Gi
 #      nvidia.com/gpu: 1
 
 resources3: 
     limits:
-      cpu: 5000m
-      memory: 6Gi
+      cpu: 2000m
+      memory: 2Gi
 #      nvidia.com/gpu: 1
     requests:
-      cpu: 2000m
-      memory: 4Gi
+      cpu: 1000m
+      memory: 1Gi
 #      nvidia.com/gpu: 1
 
 
