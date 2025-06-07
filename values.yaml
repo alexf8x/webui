@@ -248,7 +248,7 @@ namespace:
 
 nodeSelector:
   nvidia.com/gpu.count: '1'
-
+  nvidia.com/gpu.product: 'NVIDIA-GeForce-RTX-3060-SHARED'
 tolerations: []
 
 affinity: {}
