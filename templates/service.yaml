@@ -12,7 +12,7 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      name: {{ .Values.service. }}
+      name: ollamaport
       targetPort: 8080
       protocol: TCP
       
