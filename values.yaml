@@ -100,6 +100,7 @@ securityContext:
    privileged: true
 
 service:
+  name: ollama
   type: ClusterIP
   port: 11434
 
@@ -111,7 +112,7 @@ service2:
 service3:
   type: ClusterIP
   port: 7777
-  name: webui 
+  name: searxng 
 #  portweb: 80
 #ingress:
 #  enabled: true
