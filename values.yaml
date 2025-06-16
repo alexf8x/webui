@@ -37,6 +37,7 @@ env:
   DEFAULT_MODELS: "llama3.1:8b"
   BIND_ADDRESS: "0.0.0.0:7777"
   SECRET: "P3OEcjXyJz8W8gCjCdZiNIzRM6ZQaGom"
+  OLLAMA_API_BASE_URL: "http://localhost:11434/api"
 
 resources: 
     limits:
