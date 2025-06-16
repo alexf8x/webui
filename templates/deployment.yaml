@@ -123,6 +123,8 @@ spec:
               value: "{{ .Values.env.WEBUI_AUTH }}"
             - name: DEFAULT_MODELS
               value: "{{ .Values.env.DEFAULT_MODELS }}"
+            - name: OLLAMA_BASE_URL
+              value: "{{ .Values.env.OLLAMA_BASE_URL }}"
            
 
               
